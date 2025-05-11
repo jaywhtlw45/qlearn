@@ -1,0 +1,98 @@
+:root{
+    --color-primary: purple;
+    --color-accent: blue;
+
+    --color-hero: blue;
+    --color-tour-name: blue;
+
+    --font-base: "Oswald", "Arial Black", sans-serif;
+
+    
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 2.5rem;
+    --font-ratio: 1.0;
+
+    --font-size-artist: 3rem;
+
+    --background: url('/assets/background.jpg')
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+
+html, body{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    background-image: var(--background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y:auto;
+}
+
+.hero {
+    flex: 1.5;
+}
+
+section, footer {
+    flex:1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+    
+    /* padding: 2rem; */
+    margin: .5rem auto;
+    width: 90%;
+
+    /* background-color: rgb(45, 161, 78); */
+    background-color: rgba(36, 3, 3, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+
+    flex-shrink: 0;
+}
+
+section:not(:first-child),
+footer{
+    /* margin-top:1.5rem; */
+}
+
+.artist {
+    color: var(--color-hero);
+    /* background-color: red; */
+    font-size: var(--font-size-artist);
+}
+
+.tour-name {
+    color: var(--color-tour-name);
+    font-size: var(--font-size-lg);
+}
+
+.event-details{
+    color: var(--color-primary);
+}
+
+.songs{
+}
+
+.songs-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.event-location{
+}
+
+
+
+
+
+
