@@ -1,0 +1,231 @@
+
+/* Base styling */
+:root {
+    --primary-color: #bb4b14;
+    --secondary-color: #222;
+    --light-color: #f4f4f4;
+    --accent-color: #ffb347;
+    --text-color: #333;
+    --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-body: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    padding-top: 60px;
+}
+
+/* Navigation */
+.main-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+}
+
+.main-nav li {
+    margin: 0 1.5rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem;
+}
+
+.cta-buttons .btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-buttons .btn:hover {
+    background-color: #a33e10;
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Features Section */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.features-list li {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Specs Section */
+.pricing-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.option {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.option h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.option p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.option ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.option ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #a33e10;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 770px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .pricing-options {
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    .features-list {
+        text-align: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav li {
+        margin: 0.5rem 0;
+    }
+
+    .cta-buttons .btn {
+        display: block;
+        margin: 1rem auto;
+    }
+}
