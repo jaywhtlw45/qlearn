@@ -1,0 +1,42 @@
+:root{
+    --color-primary: purple;
+    --color-accent: blue;
+
+    --background-product-image: black;
+    --background-product-info: grey;
+
+    --font-base: "Oswald", "Arial Black", sans-serif;
+    --font-color: black;
+    
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 2.5rem;
+    --font-ratio: 1.0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    text-align: center;
+    color: var(--font-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image{
+    /* justify-content: center; */
+    /* width: 100%;  */
+    align-self: stretch;
+    background: var(--background-product-image);
+    padding: 5rem;
+    /* display: block; */
+}
+
+.product-image img{
+    justify-content: center;
+    /* width: 100%; */
+    display: none;
+}
